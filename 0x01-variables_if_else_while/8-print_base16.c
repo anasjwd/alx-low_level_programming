@@ -9,13 +9,11 @@
 int main(void)
 {
 	int i;
-	int b[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-	char s[] = "abcdef";
 
-	for (i = 0 ; i < 10 ; i++)
-		putchar(b[i] + '0');
-	for (i = 0 ; i < 7 ; i++)
-		putchar(s[i]);
+	for (i = 48 ; i < 58 ; i++)
+		putchar(i);
+	for (i = 97 ; i < 103 ; i++)
+		putchar(i);
 	putchar('\n');
 	return (0);
 }
