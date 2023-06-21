@@ -4,7 +4,7 @@
 /**
  * main - Entry point of the program
  *
- * Description: A C program generates n
+ * @n: the integer
  *
  * Return: 0 on success
  */
