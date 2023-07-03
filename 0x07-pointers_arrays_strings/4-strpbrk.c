@@ -17,10 +17,9 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (accept[j] == *s)
 			{
-				goto here;
+				return (s);
 			}
 		}
 	}
-here:
-	return (s);
+	return ('\0');
 }
