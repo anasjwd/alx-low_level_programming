@@ -1,5 +1,7 @@
 #include "main.h"
 
+int second_sqrt_recursion(int n, int i);
+
 /**
  * _sqrt_recursion - original function
  * @n: the number
