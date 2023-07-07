@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 
 int checkisdigit(char *s)
 {
-	long unsigned int i = 0;
+	unsigned long int i = 0;
 
 	for (i = 0 ; i < strlen(s) ; i++)
 	{
