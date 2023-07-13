@@ -13,16 +13,19 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *s;
-	int length = strlen(s1) + n;
+	int length;
+
+	/* treating NULL as an empty string*/
+	if (s2 == NULL)
+		s2 = "";
+
+	/*getting the size of s*/
+	length = strlen(s1) + n + 1;
 
 	/*allocate space for s1 and n bytes from s2*/
 	s = malloc(length);
 	if (s == NULL)
 		return (NULL);
-
-	/* treating NULL as an empty string*/
-	if (s2 == NULL)
-		s2 = "";
 
 	/*concatenating the two strings.*/
 	strcpy(s, s1);
