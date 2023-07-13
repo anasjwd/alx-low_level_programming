@@ -18,6 +18,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/* treating NULL as an empty string*/
 	if (s2 == NULL)
 		s2 = "";
+	if (s1 == NULL)
+		s1 = "";
 
 	/*getting the size of s*/
 	length = strlen(s1) + n + 1;
