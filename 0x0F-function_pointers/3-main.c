@@ -18,11 +18,11 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		return(98);
+		return (98);
 	}
-	
+
 	if (strcmp(operator, "+") != 0 && strcmp(operator, "-") != 0
-		&& strcmp(operator, "*") != 0 && strcmp(operator, "/") != 0 
+		&& strcmp(operator, "*") != 0 && strcmp(operator, "/") != 0
 		&& strcmp(operator, "%") != 0)
 	{
 		printf("Error\n");
