@@ -3,16 +3,14 @@
 /**
  * ft_strlen - calculating thr length of the string.
  * @s: the string.
+ * @len: var for string the length of string.
  *
  * Return: the length of the string.
  */
-int ft_strlen(char *s)
+int ft_strlen(char *s, int len)
 {
-	int len;
-
-	len = 0;
-	while (s[len])
-		len++;
+	if (*s != '\0')
+		return (ft_strlen(s + 1, len + 1));
 	return (len);
 }
 
@@ -46,6 +44,6 @@ int is_palindrome(char *s)
 {
 	int len;
 
-	len = ft_strlen(s);
+	len = ft_strlen(s, 0);
 	return (recursive_pal(s, 0, len));
 }
