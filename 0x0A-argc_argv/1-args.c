@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 {
 	(void)argv;
 
-	putnbr(argc);
+	putnbr(argc - 1);
 	_putchar('\n');
 	return (0);
 }
