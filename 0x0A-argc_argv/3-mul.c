@@ -1,6 +1,12 @@
 #include "main.h"
 #include <unistd.h>
 
+/**
+ * _atoi - turn a number from string to int.
+ * @str: the string.
+ *
+ * Return: the number.
+ */
 int _atoi(char *str)
 {
 	int i;
@@ -35,8 +41,13 @@ int _atoi(char *str)
  * putnbr - print a number.
  * @d: the number.
  */
-void putnbr(int d)
+void putnbr(long d)
 {
+	if (d < 0)
+	{
+		_putchar('-');
+		d = -d;
+	}
 	if (d < 10)
 	{
 		_putchar(d + '0');
