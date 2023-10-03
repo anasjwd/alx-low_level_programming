@@ -93,7 +93,7 @@ void fill(char *str, char **array)
 }
 
 /**
- * ft_split - Split a string into an array of words.
+ * strtow - Split a string into an array of words.
  * @str: The input string to split.
  *
  * Return: A dynamically allocated array of strings.
@@ -107,7 +107,19 @@ char **strtow(char *str)
 {
 	char **array;
 	int nbr_words;
+	int i;
+	int check;
 
+	i = 0;
+	check = 0;
+	while (str[i])
+	{
+		if (str[i] != ' ')
+			check = 1;
+		i++;
+	}
+	if (check == 0)
+		return (NULL);
 	nbr_words = wordcounter(str);
 	array = malloc(sizeof(char *) * (nbr_words + 1));
 	if (array == NULL)
