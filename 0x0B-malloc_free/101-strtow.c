@@ -103,7 +103,7 @@ void fill(char *str, char **array)
  * from the input string. The last element of the array is set to NULL.
  * If memory allocation fails, it returns NULL.
  */
-char **ft_split(char *str)
+char **strtow(char *str)
 {
 	char **array;
 	int nbr_words;
