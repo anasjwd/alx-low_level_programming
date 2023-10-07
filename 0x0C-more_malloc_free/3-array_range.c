@@ -31,9 +31,9 @@ int *array_range(int min, int max)
 		return (NULL);
 	size = _abs(max - min + 1);
 	ptr = malloc(size * sizeof(int));
-	if (!ptr)
+	if (ptr == NULL)
 		return (NULL);
-	i = min;
+	i = 0;
 	while (i < size)
 	{
 		ptr[i] = min + i;
