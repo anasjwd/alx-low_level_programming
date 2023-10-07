@@ -2,6 +2,19 @@
 #include <stdlib.h>
 
 /**
+ * _abs - the absolute value.
+ * @a: the numbere.
+ *
+ * Return: the absolute value of the number.
+ */
+int _abs(int a)
+{
+	if (a < 0)
+		return (-a);
+	return (a);
+}
+
+/**
  * array_range - function that creates an array of integers.
  * @min: minimum number.
  * @max: maximum number.
@@ -16,7 +29,7 @@ int *array_range(int min, int max)
 
 	if (min > max)
 		return (NULL);
-	size = max - min + 1;
+	size = _abs(max - min + 1);
 	ptr = malloc(size * sizeof(int));
 	if (!ptr)
 		return (NULL);
