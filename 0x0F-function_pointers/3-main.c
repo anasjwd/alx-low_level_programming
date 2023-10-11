@@ -16,12 +16,14 @@ int main(int ac, char **av)
 	int result;
 	int a;
 	int b;
+	char *operation;
 
 	if (ac == 4)
 	{
+		operation = av[2];
 		a = atoi(av[1]);
 		b = atoi(av[3]);
-		if ((strcmp(av[2], "/") == 0 || strcmp(av[2], "%") == 0) && b == 0)
+		if ((*operation == '/' || *operation == '%') && b == 0)
 		{
 			printf("Error\n");
 			return (100);
