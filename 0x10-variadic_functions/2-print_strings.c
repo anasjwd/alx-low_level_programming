@@ -38,7 +38,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		putstr(sep);
 		putstr(va_arg(args, char *));
-		sep = separator;
+		if (separator != NULL)
+			sep = separator;
 		i++;
 	}
 	_putchar('\n');
