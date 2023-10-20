@@ -13,7 +13,7 @@ size_t print_list(const list_t *h)
 	list_t *node;
 	int num = 0;
 
-	node =(list_t *)h;
+	node = (list_t *)h;
 	while (node != NULL)
 	{
 		if (node->str)
