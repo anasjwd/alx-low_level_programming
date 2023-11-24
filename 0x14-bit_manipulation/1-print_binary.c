@@ -26,7 +26,6 @@ int	num_of_bits(unsigned long num)
 void print_binary(unsigned long int n)
 {
 	int	size;
-	int	bit;
 	int	iterator;
 
 	size = num_of_bits(n);
