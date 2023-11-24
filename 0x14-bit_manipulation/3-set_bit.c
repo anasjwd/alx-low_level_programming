@@ -11,7 +11,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int bitmask;
 
-	if (index > 31)
+	if (index > 31 || n == NULL)
 		return (-1);
 	bitmask = 1 << index;
 	*n |= bitmask;
