@@ -10,7 +10,7 @@ int	num_of_bits(unsigned long num)
 {
 	int     digits;
 
-	 digits = 1;
+	digits = 1;
 	while (num > 1)
 	{
 		num >>= 1;
