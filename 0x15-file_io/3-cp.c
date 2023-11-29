@@ -55,6 +55,7 @@ int main(int ac, char **av)
 	if (fd_to == -1)
 	{
 		dprintf(1, "Error: Can't write to %s\n", av[2]);
+		close(fd_from);
 		return (99);
 	}
 	while (1)
@@ -63,6 +64,7 @@ int main(int ac, char **av)
 		if (read_bytes == -1)
 		{
 			dprintf(1, "Error: Can't read from file %s\n", av[1]);
+			ft_close(fd_from, ft_to);
 			return (98);
 		}
 		else if (read_bytes == 0)
@@ -71,6 +73,7 @@ int main(int ac, char **av)
 		if (wrote_bytes == -1)
 		{
 			dprintf(1, "Error: Can't write to %s\n", av[2]);
+			ft_close(fd_from, fd_to);
 			return (99);
 		}
 	}
