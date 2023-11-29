@@ -64,7 +64,7 @@ int main(int ac, char **av)
 		if (read_bytes == -1)
 		{
 			dprintf(1, "Error: Can't read from file %s\n", av[1]);
-			ft_close(fd_from, ft_to);
+			ft_close(fd_from, fd_to);
 			return (98);
 		}
 		else if (read_bytes == 0)
