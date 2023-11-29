@@ -38,7 +38,7 @@ int main(int ac, char **av)
 {
 	int	fd_from, fd_to;
 	char	buffer[1024];
-	ssize_t	read_bytes, wrote_bytes;
+	ssize_t	read_bytes = 1024, wrote_bytes;
 
 	if (ac != 3)
 	{
@@ -51,14 +51,13 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		return (98);
 	}
-	fd_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC | O_APPEND, 0664);
+	fd_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		close(fd_from);
 		return (99);
 	}
-	read_bytes = 1024;
 	while (read_bytes == 1024)
 	{
 		read_bytes = read(fd_from, buffer, 1024);
